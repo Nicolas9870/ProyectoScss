@@ -1,0 +1,113 @@
+#grilla {
+  display: grid;
+  grid-template-areas: "section section"
+ "form form"
+ "div div"
+ "footer footer";
+  grid-template-rows: 325px 100px 300px;
+  grid-template-columns: 100%; }
+  #grilla section {
+    grid-area: section; }
+  #grilla form {
+    grid-area: form; }
+  #grilla div {
+    grid-area: div; }
+  #grilla footer {
+    grid-area: footer; }
+
+.fondodePag {
+  background-image: url(../Imagenes/pexels-esther-2863547.jpg);
+  background-size: cover; }
+
+.inicio {
+  background-color: #2e0017;
+  border-top: solid 5px #ffbb08;
+  border-left: solid 5px #ffbb08;
+  border-right: solid 5px #612000;
+  border-bottom: solid 5px #612000;
+  border-radius: 12px;
+  top: 0; }
+  .inicio .logoInicio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 50px;
+    transition: height 2s;
+    margin-bottom: 40px; }
+  .inicio .logoInicio:hover {
+    height: 70px; }
+
+.logoInicio_edicionImagen {
+  height: 80px;
+  border-radius: 90px;
+  margin: auto;
+  text-align: center; }
+
+.tituloPrincipal {
+  color: #ff5a41;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 40px;
+  font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+  text-align: center; }
+
+.SegundoText {
+  color: #ff5a41;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: 'Helvetica','Verdana','Monaco',sans-serif;
+  text-align: center; }
+
+.barradeNavegacion {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #a75329, #ffbb08);
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 3px; }
+
+.colordeNombre {
+  color: #B85252; }
+
+.nom {
+  background-color: #2e0017;
+  border-top: solid 5px #612000;
+  border-left: solid 5px #612000;
+  border-right: solid 5px #ffbb08;
+  border-bottom: solid 5px #ffbb08;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px; }
+  .nom .botonesInicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px; }
+  .nom .imagenesInicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    transform: skewY(5deg);
+    margin-left: auto;
+    margin-right: auto; }
+
+.footer {
+  background-color: #c96333;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  width: 100%;
+  bottom: 0;
+  position: relative; }
