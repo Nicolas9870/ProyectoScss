@@ -152,13 +152,45 @@
     border-radius: 5px;
     padding: 5px;
 }
+//SE AGREGA UN MIXIN
+@mixin Card ($width, $height){
+    height: $height;
+    width: $width;
+}
 .card1{
     background-color: #8d4848;
-    width: 300px;
-    height: 450px;
     position: relative;
     border-radius: 15px;
     margin-top: 20px;
+    @include Card(300px,450px)
+}
+.card2{
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    @include Card(300px,450px)
+}
+.card3{
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    @include Card(300px,450px)
+}
+.card4{
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    @include Card(300px,450px)
+}
+.card5{
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    @include Card(300px,450px)
 }
 .fondoDescuentoCard1{
     background-color: gray;
