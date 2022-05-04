@@ -29,6 +29,18 @@
     "footer footer";
     grid-template-rows: 40% 60%;
     grid-template-columns: 50% 50%;
+    section{
+        grid-area: section;
+    }
+    form{
+        grid-area: form;
+    }
+    div{
+        grid-area: div;
+    }
+    footer{
+        grid-area: footer;
+    }
 }
 //PAGUINA PRINCIPAL
 .fondodePag{
@@ -147,23 +159,22 @@
     position: relative;
     border-radius: 15px;
     margin-top: 20px;
-    .fondoDescuentoCard1{
-        background-color: gray;
-        position: absolute;
-        top: 0;
-        right: 10px;
-        border-radius: 5px;
-        padding: 5px;
-    }
-    .card1 img{
-        width: 100px;
-        height: 200px;
-        margin-top: 15px;
-        margin-left: 105px;
-        margin-right: 20x;
-        margin-bottom: 0px;
-        
-    }
+}
+.fondoDescuentoCard1{
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.card1 img{
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px;
 }
 .textCenter{
     margin-left: 70px;
@@ -695,6 +706,16 @@
         grid-template-rows: 17% 83% ;
         grid-template-columns: 50% 50%;
     }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 326px;
+        width: 156%;
+        bottom: 0;
+        position: relative;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1440px) and (max-width:1800px) {
     #Produc{
@@ -705,6 +726,16 @@
         "footer footer";
         grid-template-rows: 18% 82% ;
         grid-template-columns: 50% 50%;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 326px;
+        width: 156%;
+        bottom: 0;
+        position: relative;
+        text-align: center;
     }
 }
 @media screen and (min-width: 1800px) and (max-width:2560px) {
