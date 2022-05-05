@@ -131,11 +131,43 @@
 
 .card1 {
   background-color: #8d4848;
-  width: 300px;
-  height: 450px;
   position: relative;
   border-radius: 15px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  height: 450px;
+  width: 300px; }
+
+.card2 {
+  background-color: #8d4848;
+  position: relative;
+  border-radius: 15px;
+  margin-top: 20px;
+  height: 450px;
+  width: 300px; }
+
+.card3 {
+  background-color: #8d4848;
+  position: relative;
+  border-radius: 15px;
+  margin-top: 20px;
+  height: 450px;
+  width: 300px; }
+
+.card4 {
+  background-color: #8d4848;
+  position: relative;
+  border-radius: 15px;
+  margin-top: 20px;
+  height: 450px;
+  width: 300px; }
+
+.card5 {
+  background-color: #8d4848;
+  position: relative;
+  border-radius: 15px;
+  margin-top: 20px;
+  height: 450px;
+  width: 300px; }
 
 .fondoDescuentoCard1 {
   background-color: gray;
@@ -152,6 +184,15 @@
   margin-left: 105px;
   margin-right: 20x;
   margin-bottom: 0px; }
+
+.botonProductos, .Agregar {
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid black; }
+
+.Agregar {
+  background-color: #ffbb08; }
 
 .textCenter {
   margin-left: 70px; }
