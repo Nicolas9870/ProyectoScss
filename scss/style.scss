@@ -208,6 +208,17 @@
     margin-right: 20x;
     margin-bottom: 0px;
 }
+//SE AGREGA EXTEND
+.botonProductos{
+    width: 100px;
+    height:25px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.Agregar{
+    @extend .botonProductos;
+    background-color: #ffbb08;
+}
 .textCenter{
     margin-left: 70px;
 }
