@@ -1,0 +1,17 @@
+Se realizaron los siguientes ediciones:
+En la seccion index se agregaron las:
+keys : Alcohol , Tienda, Bebidas , Hielo, Combos
+Descriptions: Sitio web creado para la venta de bebidas y productos en la zona de godoy cruz , mendoza.
+En las pagina Carrito:
+keys: Alcohol, Bebidas , Hielo, Combos, Fiesta.
+Description: Carrito de compras , en el podremos decidir como abonar y verificaremos los promductos seleccionados.
+En la pagina Contactos:
+keys: Telefonos, instagram, whatsapp , contacto, tratos.
+Description: Contactos, en esta pagina encontaras nuestra informacion y metodos de contacto con los cuales podremos despejar tus dudas y solucionar posibles inconvenientes en tu compra.
+En la pagina Productos:
+keys: Alcohol , Cerbeza, vin, soda, gaseosas.
+Description: Productos, aqui veremos todos los productos que estan a la venta y si hay en existencias o no
+En la pagina Ubicacion:
+keys: Tienda, geolocalizacion, mapa, Ubicacion, maps, google.
+Description: Ubicacion, es nuestra ubicacion exacta para que puedas encontrarnos y venir en cualquier momento.
+Los titulos de cada pagina ya han sido agregados con anterioridad.
