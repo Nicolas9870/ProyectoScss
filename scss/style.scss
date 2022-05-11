@@ -268,14 +268,19 @@
     }
 }
 //PAGINA CONTACTOS
+$estilos: (
+    color :  #ff5a41,
+    margin: 10px 10px 10px 10px,
+);
+//'SEA AGREGA UN MAP-GET
 .letraContactos{
-    color: #ff5a41;
+    color: map-get($estilos, color);
     font-style: italic;
     font-weight:bolder;
     font-size:20px;
     font-family:'Monaco','sans-serif','Helvetica','Verdana';
     text-align: center;
-    margin: 10px 10px 10px 10px ;
+    margin: map-get($estilos, margin);
 }
 .contenedorContactos{
     display: flex;
