@@ -512,7 +512,7 @@ $estilos: (
         "div div"
         "footer footer";
         grid-template-rows: 25% 19% 36%;
-        grid-template-columns: 61% 39%; 
+        grid-template-columns: 50% 50%; 
     }
     .inicio{
         background-color: #2e0017;
@@ -770,6 +770,15 @@ $estilos: (
         grid-template-rows: 9% 81% 10%;
         grid-template-columns: 20% 80%;
     }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
 }
 //MEDIA PRODUCTOS
 @media screen and (min-width: 320px) and (max-width:500px) {
@@ -782,6 +791,15 @@ $estilos: (
         grid-template-rows: 9% 91%;
         grid-template-columns: 50% 50%;
     }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
 }
 @media screen and (min-width: 500px) and (max-width:768px) {
     #Produc{
@@ -792,6 +810,15 @@ $estilos: (
         "footer footer";
         grid-template-rows: 15% 85%;
         grid-template-columns: 50% 50%;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
     }
 }
 @media screen and (min-width: 768px) and (max-width:900px) {
@@ -804,6 +831,15 @@ $estilos: (
         grid-template-rows: 14% 86%;
         grid-template-columns: 50% 50%;
     }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
 }
 @media screen and (min-width: 900px) and (max-width:1024px) {
     #Produc{
@@ -815,6 +851,15 @@ $estilos: (
         grid-template-rows: 18% 82%;
         grid-template-columns: 50% 50%;
     }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
 }
 @media screen and (min-width: 1024px) and (max-width:1200px) {
     #Produc{
@@ -825,6 +870,15 @@ $estilos: (
         "footer footer";
         grid-template-rows: 17% 83% ;
         grid-template-columns: 50% 50%;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
     }
 }
 @media screen and (min-width: 1200px) and (max-width:1440px) {
@@ -878,6 +932,15 @@ $estilos: (
         "footer footer";
         grid-template-rows: 25% 75% ;
         grid-template-columns: 50% 50%;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
     }
 }
 //MEDIA CONTACTOS

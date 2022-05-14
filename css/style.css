@@ -436,7 +436,7 @@
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
     grid-template-rows: 25% 19% 36%;
-    grid-template-columns: 61% 39%; }
+    grid-template-columns: 50% 50%; }
   .inicio {
     background-color: #2e0017;
     border-top: solid 5px #ffbb08;
@@ -646,42 +646,90 @@
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 9% 81% 10%;
-    grid-template-columns: 20% 80%; } }
+    grid-template-columns: 20% 80%; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; } }
 
 @media screen and (min-width: 320px) and (max-width: 500px) {
   #Produc {
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 9% 91%;
-    grid-template-columns: 50% 50%; } }
+    grid-template-columns: 50% 50%; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; } }
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
   #Produc {
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 15% 85%;
-    grid-template-columns: 50% 50%; } }
+    grid-template-columns: 50% 50%; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; } }
 
 @media screen and (min-width: 768px) and (max-width: 900px) {
   #Produc {
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 14% 86%;
-    grid-template-columns: 50% 50%; } }
+    grid-template-columns: 50% 50%; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; } }
 
 @media screen and (min-width: 900px) and (max-width: 1024px) {
   #Produc {
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 18% 82%;
-    grid-template-columns: 50% 50%; } }
+    grid-template-columns: 50% 50%; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; } }
 
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   #Produc {
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 17% 83%;
-    grid-template-columns: 50% 50%; } }
+    grid-template-columns: 50% 50%; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; } }
 
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
   #Produc {
@@ -720,7 +768,15 @@
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 25% 75%;
-    grid-template-columns: 50% 50%; } }
+    grid-template-columns: 50% 50%; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; } }
 
 @media screen and (min-width: 320px) and (max-width: 500px) {
   #Contac {
