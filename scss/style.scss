@@ -42,11 +42,25 @@
         grid-area: footer;
     }
 }
-//PAGUINA PRINCIPAL
-.fondodePag{
-    background-image: url(../Imagenes/pexels-esther-2863547.jpg);
-    background-size  : cover;    
+#Contac{
+    display: grid;
+    grid-template-areas: 
+    "section section"
+    "div div"
+    "footer footer";
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 50% 50%;
+    section{
+        grid-area: section;
+    }
+    div{
+        grid-area: div;
+    }
+    footer{
+        grid-area: footer;
+    }
 }
+//PAGUINA PRINCIPAL
 .inicio{
     background-color: #2e0017;
     border-top:solid 5px #ffbb08;
@@ -105,6 +119,7 @@
 }
 .colordeNombre{
     color: #B85252;
+    
 }
 .nom {
     background-color: #2e0017;
@@ -117,23 +132,23 @@
     flex-direction: row; 
     justify-content: space-around;
     margin-top: 10px;
-    .botonesInicio{
-        display: flex;  
-        flex-direction: row; 
-        justify-content: center;
-        margin-top: 5px;
-    }
-    .imagenesInicio{
-        display: flex;  
-        flex-direction: row; 
-        justify-content: space-around;
-        margin-top: 10px;
-        width: 200px;
-        height: 200px;
-        transform: skewY(5deg);
-        margin-left: auto; 
-        margin-right: auto;
-    }
+}
+.imagenesInicio{
+    display: flex;  
+    flex-direction: row; 
+    justify-content: space-around;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    transform: skewY(5deg);
+    margin-left: auto; 
+    margin-right: auto;
+}
+.botonesInicio{
+    display: flex;  
+    flex-direction: row; 
+    justify-content: center;
+    margin-top: 5px;
 }
 //PAGUINA PRODUCTOS
 .productos{
@@ -286,7 +301,6 @@ $estilos: (
     display: flex;
     justify-content: space-around;
     margin-bottom: 100px;
-    
 }
 .infoContactos{
     background-color: #2e0017;
@@ -296,6 +310,10 @@ $estilos: (
     border-bottom: solid 5px #612000;
     border-radius: 12px;
     text-align: center;
+}
+.footerContactos{
+    text-align: center;
+    width: 100%;
 }
 //ANIMACION
 .zoom {
@@ -315,7 +333,7 @@ $estilos: (
     bottom: 0;
     position: relative;
 }
-//MEDIA
+//MEDIA INICIO
 @media screen and (min-width: 320px) and (max-width:500px) {
     #grilla{
         display: grid;
@@ -324,7 +342,7 @@ $estilos: (
         "form form"
         "div div"
         "footer footer";
-        grid-template-rows: 28% 13% 12%;
+        grid-template-rows: 31% 20% 31%;
         grid-template-columns: 61% 39%; 
     }
     .barradeNavegacion {
@@ -367,7 +385,7 @@ $estilos: (
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 300px;
-        width: 170%;
+        width: 100%;
         bottom: 0;
         position: relative;
     }
@@ -423,7 +441,7 @@ $estilos: (
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 300px;
-        width: 170%;
+        width: 100%;
         bottom: 0;
         position: relative;
     }
@@ -478,10 +496,11 @@ $estilos: (
         background-color: #c96333;
         background-position: center center;
         background-repeat: no-repeat;
-        min-height: 300px;
-        width: 170%;
+        min-height: 273px;
+        width: 100%;
         bottom: 0;
         position: relative;
+        text-align: center;
     }
 }
 @media screen and (min-width: 1020px) and (max-width:1200px) {
@@ -492,8 +511,17 @@ $estilos: (
         "form form"
         "div div"
         "footer footer";
-        grid-template-rows: 25% 15% 30%;
-        grid-template-columns: 57% 39%; 
+        grid-template-rows: 25% 19% 36%;
+        grid-template-columns: 61% 39%; 
+    }
+    .inicio{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        top: 0;
     }
     .barradeNavegacion {
         display: flex;
@@ -513,7 +541,7 @@ $estilos: (
         flex-direction: column;
         justify-content: space-around;
         margin-top: 135px;
-        width: 195px;
+        width: 25%;
         height: 90px;
         margin-left: auto;
         margin-right: auto;
@@ -535,14 +563,14 @@ $estilos: (
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 300px;
-        width: 170%;
+        width: 100%;
         bottom: 0;
         position: relative;
         text-align: center;
         
     }
 }
-@media screen and (min-width: 1200px) and (max-width:1800px) {
+@media screen and (min-width: 1200px) and (max-width:1440px) {
     #grilla{
         display: grid;
         grid-template-areas: 
@@ -550,8 +578,64 @@ $estilos: (
         "form form"
         "div div"
         "footer footer";
-        grid-template-rows: 25% 15% 30%;
-        grid-template-columns: 57% 39%; 
+        grid-template-rows:  25% 22% 36%;
+        grid-template-columns: 61% 39%; 
+    }
+    .inicio{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        top: 0;
+    }
+    .barradeNavegacion {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-image: linear-gradient(to right, #a75329, #ffbb08);
+        text-align: center;
+        border-radius: 12px;
+        margin-bottom: 93px;
+    }
+
+    .nom {
+        background-color: #2e0017;
+        border-top:solid 5px #612000;
+        border-left: solid 5px #612000;
+        border-right: solid 5px #ffbb08;
+        border-bottom: solid 5px #ffbb08;
+        border-radius: 12px;
+        display: flex;  
+        flex-direction: column; 
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 312px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        text-align: center;
+}
+}
+@media screen and (min-width: 1440px) and (max-width:1800px) {
+    #grilla{
+        display: grid;
+        grid-template-areas: 
+        "section section" 
+        "form form"
+        "div div"
+        "footer footer";
+        grid-template-rows: 25% 19% 29%;
+        grid-template-columns: 71% 71%;
     }
     .barradeNavegacion {
         display: flex;
@@ -593,11 +677,10 @@ $estilos: (
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 300px;
-        width: 170%;
+        width: 100%;
         bottom: 0;
         position: relative;
         text-align: center;
-        
     }
 }
 @media screen and (min-width: 1800px) and (max-width:2560px) {
@@ -628,7 +711,7 @@ $estilos: (
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 300px;
-        width: 174%;
+        width: 100%;
         bottom: -179px;
         position: relative;
     }
@@ -672,7 +755,7 @@ $estilos: (
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 300px;
-        width: 204%;
+        width: 100%;
         bottom: -179px;
         position: relative;
     }
@@ -688,6 +771,7 @@ $estilos: (
         grid-template-columns: 20% 80%;
     }
 }
+//MEDIA PRODUCTOS
 @media screen and (min-width: 320px) and (max-width:500px) {
     #Produc{
         display: grid;
@@ -779,7 +863,7 @@ $estilos: (
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 326px;
-        width: 156%;
+        width: 100%;
         bottom: 0;
         position: relative;
         text-align: center;
@@ -794,5 +878,241 @@ $estilos: (
         "footer footer";
         grid-template-rows: 25% 75% ;
         grid-template-columns: 50% 50%;
+    }
+}
+//MEDIA CONTACTOS
+@media screen and (min-width: 320px) and (max-width:500px) {
+    #Contac{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer";
+        grid-template-rows: 34% 31%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .letraContactos{
+        color: map-get($estilos, color);
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: map-get($estilos, margin);
+    }
+    .contenedorContactos{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+    .infoContactos{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .footerContactos{
+        text-align: center;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 500px) and (max-width:720px) {
+    #Contac{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer";
+        grid-template-rows: 29% 20% 16%;
+        grid-template-columns: 44% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .letraContactos{
+        color: map-get($estilos, color);
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: map-get($estilos, margin);
+    }
+    .contenedorContactos{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+    .infoContactos{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .footerContactos{
+        text-align: center;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 720px) and (max-width:1020px) {
+    #Contac{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer";
+        grid-template-rows: 30% 23% 15%;
+        grid-template-columns: 44% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .letraContactos{
+        color: map-get($estilos, color);
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: map-get($estilos, margin);
+    }
+    .contenedorContactos{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+    .infoContactos{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .footerContactos{
+        text-align: center;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1020px) and (max-width:1200px) {
+    #Contac{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer";
+        grid-template-rows: 30% 23% 15%;
+        grid-template-columns: 44% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .letraContactos{
+        color: map-get($estilos, color);
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: map-get($estilos, margin);
+    }
+    .contenedorContactos{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+    .infoContactos{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .footerContactos{
+        text-align: center;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width:1440px) {
+    #Contac{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer";
+        grid-template-rows: 29% 24% 15%;
+        grid-template-columns: 74% 74%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .letraContactos{
+        color: map-get($estilos, color);
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: map-get($estilos, margin);
+    }
+    .contenedorContactos{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+    .infoContactos{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .footerContactos{
+        text-align: center;
+        width: 100%;
     }
 }
