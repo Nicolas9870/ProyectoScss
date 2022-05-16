@@ -154,7 +154,8 @@
   font-style: italic;
   font-weight: bolder;
   font-size: 18px;
-  font-family: 'Monaco','sans-serif','Helvetica','Verdana'; }
+  font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+  text-align: center; }
 
 .fondoDescuentoCard1 {
   background-color: gray;
