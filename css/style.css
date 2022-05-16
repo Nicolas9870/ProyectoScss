@@ -52,25 +52,27 @@
 
 .fonodpantalla {
   background-color: #e79a9a; }
-  .fonodpantalla .inicio {
-    background-color: #2e0017;
-    border-top: solid 5px #ffbb08;
-    border-left: solid 5px #ffbb08;
-    border-right: solid 5px #612000;
-    border-bottom: solid 5px #612000;
-    border-radius: 12px;
-    top: 0; }
-    .fonodpantalla .inicio .barradeNavegacion {
-      display: flex;
-      justify-content: space-around;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-image: linear-gradient(to right, #2b2724, #f0d48c);
-      text-align: center;
-      border-radius: 12px;
-      margin-bottom: 3px; }
+
+.inicio {
+  background-color: #2e0017;
+  border-top: solid 5px #ffbb08;
+  border-left: solid 5px #ffbb08;
+  border-right: solid 5px #612000;
+  border-bottom: solid 5px #612000;
+  border-radius: 12px;
+  top: 0; }
+
+.barradeNavegacion {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #ff9561, #ffbb08);
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 3px; }
 
 .logoInicio {
   display: flex;
@@ -148,6 +150,12 @@
   border-radius: 5px;
   padding: 5px; }
 
+.letraCards {
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 18px;
+  font-family: 'Monaco','sans-serif','Helvetica','Verdana'; }
+
 .fondoDescuentoCard1 {
   background-color: gray;
   position: absolute;
@@ -188,6 +196,7 @@
 
 .letraCarrito {
   color: #ff5a41;
+  position: relative;
   font-style: italic;
   font-weight: bolder;
   font-size: 20px;
@@ -215,9 +224,10 @@
   font-family: 'Monaco','sans-serif','Helvetica','Verdana';
   text-align: center;
   margin: 10px 10px 10px 10px; }
-  .letraUbicacion .bordeUbicacion {
-    border-radius: 12px;
-    text-align: center; }
+
+.bordeUbicacion {
+  border-radius: 12px;
+  text-align: center; }
 
 .letraContactos {
   color: #ff5a41;
@@ -259,7 +269,11 @@
   min-height: 300px;
   width: 100%;
   bottom: 0;
-  position: relative; }
+  position: relative;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: 'Monaco','sans-serif','Helvetica','Verdana'; }
 
 @media screen and (min-width: 320px) and (max-width: 500px) {
   #grilla {
@@ -274,7 +288,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 0px; }
@@ -305,7 +319,8 @@
     min-height: 300px;
     width: 100%;
     bottom: 0;
-    position: relative; } }
+    position: relative;
+    text-align: center; } }
 
 @media screen and (min-width: 500px) and (max-width: 720px) {
   #grilla {
@@ -320,7 +335,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 218px; }
@@ -351,7 +366,8 @@
     min-height: 300px;
     width: 100%;
     bottom: 0;
-    position: relative; } }
+    position: relative;
+    text-align: center; } }
 
 @media screen and (min-width: 720px) and (max-width: 1020px) {
   #grilla {
@@ -366,7 +382,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 93px; }
@@ -421,7 +437,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 93px; }
@@ -476,7 +492,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 93px; }
@@ -514,7 +530,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 93px; }
@@ -561,7 +577,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 3px; }
@@ -578,8 +594,8 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 34% 13% 14%;
-    grid-template-columns: 60% 50%; }
+    grid-template-rows: 30% 20% 40%;
+    grid-template-columns: 50% 50%; }
   .barradeNavegacion {
     display: flex;
     justify-content: space-around;
@@ -587,7 +603,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
+    background-image: linear-gradient(to right, #db9c7c, #ffbb08);
     text-align: center;
     border-radius: 12px;
     margin-bottom: 3px; }
@@ -608,7 +624,8 @@
     min-height: 300px;
     width: 100%;
     bottom: -179px;
-    position: relative; } }
+    position: relative;
+    text-align: center; } }
 
 @media screen and (min-width: 200px) and (max-width: 320px) {
   #Produc {
@@ -945,7 +962,7 @@
   #Produc {
     display: grid;
     grid-template-areas: "section section" "div div" "footer footer";
-    grid-template-rows: 14% 86%;
+    grid-template-rows: 12% 88%;
     grid-template-columns: 50% 50%; }
   .productos {
     display: flex;
@@ -1800,3 +1817,587 @@
   .footerContactos {
     text-align: center;
     width: 100%; } }
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 29% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 500px) and (max-width: 720px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 30% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 720px) and (max-width: 1200px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 25% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 1200px) and (max-width: 1200px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 1440px) and (max-width: 1800px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 25% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 1800px) and (max-width: 2440px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 27% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 2440px) and (max-width: 2840px) {
+  #Carrit {
+    display: grid;
+    grid-template-areas: "section section" "div div" "footer footer";
+    grid-template-rows: 27% 33% 33%;
+    grid-template-columns: 50% 50%; }
+    #Carrit section {
+      grid-area: section; }
+    #Carrit div {
+      grid-area: div; }
+    #Carrit footer {
+      grid-area: footer; }
+  .infoCarrito {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 10px; }
+  .letraCarrito {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .divicionfooter {
+    margin-bottom: 100px; }
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+    .letraUbicacion .bordeUbicacion {
+      border-radius: 12px;
+      text-align: center; } }
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 320px; } }
+
+@media screen and (min-width: 500px) and (max-width: 720px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 500px; } }
+
+@media screen and (min-width: 720px) and (max-width: 1200px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 720px; } }
+
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 1200px; } }
+
+@media screen and (min-width: 1440px) and (max-width: 1840px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 1440px; } }
+
+@media screen and (min-width: 1840px) and (max-width: 2440px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 1840px; } }
+
+@media screen and (min-width: 2440px) and (max-width: 2840px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 2440px; } }
+
+@media screen and (min-width: 2840px) and (max-width: 3000px) {
+  .infoUbicacion {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    text-align: center; }
+  .letraUbicacion {
+    color: #ff5a41;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: 'Monaco','sans-serif','Helvetica','Verdana';
+    text-align: center;
+    margin: 10px 10px 10px 10px; }
+  .bordeUbicacion {
+    border-radius: 12px;
+    text-align: center;
+    width: 2840px; } }
