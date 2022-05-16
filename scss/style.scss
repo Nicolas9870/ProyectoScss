@@ -60,34 +60,64 @@
         grid-area: footer;
     }
 }
-//PAGUINA PRINCIPAL
-.inicio{
-    background-color: #2e0017;
-    border-top:solid 5px #ffbb08;
-    border-left: solid 5px #ffbb08;
-    border-right: solid 5px #612000;
-    border-bottom: solid 5px #612000;
-    border-radius: 12px;
-    top: 0;
-    .logoInicio{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        justify-content: center;
-        justify-content: space-evenly;
-        height: 50px;
-        transition: height 2s;
-        margin-bottom: 40px;
+#Carrit{
+    display: grid;
+    grid-template-areas: 
+    "section section"
+    "div div"
+    "footer footer"
+    ;
+    grid-template-rows: 33% 33% 33% ;
+    grid-template-columns: 50% 50%; 
+    section{
+        grid-area: section;
     }
-    .logoInicio:hover {
-        height: 70px;
+    div{
+        grid-area: div;
+    }
+    footer{
+        grid-area: footer;
     }
 }
-.logoInicio_edicionImagen{
-    height: 80px;
-    border-radius: 90px;
-    margin:auto;
-	text-align:center;
+//PAGUINA PRINCIPAL
+.fonodpantalla{
+    background-color: #e79a9a;
+    .inicio{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        top: 0;
+        .barradeNavegacion{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: linear-gradient(to right, #2b2724, #f0d48c);
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 3px;
+        }   
+    }
+}
+.logoInicio{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 50px;
+    margin-bottom: 40px;
+    .logoInicio_edicionImagen{
+        height: 80px;
+        border-radius: 90px;
+        margin:auto;
+        text-align:center;
+    }
 }
 .tituloPrincipal{
     color: #ff5a41;
@@ -105,21 +135,8 @@
     font-family:'Helvetica','Verdana','Monaco',sans-serif;
     text-align: center;
 }
-.barradeNavegacion{
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-image: linear-gradient(to right, #a75329, #ffbb08);
-    text-align: center;
-    border-radius: 12px;
-    margin-bottom: 3px;
-}
 .colordeNombre{
-    color: #B85252;
-    
+    color: #af7f7f;   
 }
 .nom {
     background-color: #2e0017;
@@ -140,7 +157,6 @@
     margin-top: 10px;
     width: 200px;
     height: 200px;
-    transform: skewY(5deg);
     margin-left: auto; 
     margin-right: auto;
 }
@@ -170,41 +186,41 @@
 @mixin Card ($width, $height){
     height: $height;
     width: $width;
-}
-.card1{
+    .card1{
     background-color: #8d4848;
     position: relative;
     border-radius: 15px;
     margin-top: 20px;
-    @include Card(300px,450px)
-}
-.card2{
-    background-color: #8d4848;
-    position: relative;
-    border-radius: 15px;
-    margin-top: 20px;
-    @include Card(300px,450px)
-}
-.card3{
-    background-color: #8d4848;
-    position: relative;
-    border-radius: 15px;
-    margin-top: 20px;
-    @include Card(300px,450px)
-}
-.card4{
-    background-color: #8d4848;
-    position: relative;
-    border-radius: 15px;
-    margin-top: 20px;
-    @include Card(300px,450px)
-}
-.card5{
-    background-color: #8d4848;
-    position: relative;
-    border-radius: 15px;
-    margin-top: 20px;
-    @include Card(300px,450px)
+    @include Card(300px,450px);
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    }
 }
 .fondoDescuentoCard1{
     background-color: gray;
@@ -224,7 +240,7 @@
 }
 //SE AGREGA EXTEND
 .botonProductos{
-    width: 100px;
+    width: 200px;
     height:25px;
     border-radius: 5px;
     border: 1px solid black;
@@ -317,12 +333,13 @@ $estilos: (
 }
 //ANIMACION
 .zoom {
-    transition: transform .2s; 
-    .zoom:hover {
+    transition: transform .2s;
+    &:hover {
         transform: scale(1.5); 
         border-radius: 6px;
     }
 }
+
 //FOOTER
 .footer {
     background-color: #c96333;
@@ -503,7 +520,7 @@ $estilos: (
         text-align: center;
     }
 }
-@media screen and (min-width: 1020px) and (max-width:1200px) {
+@media screen and (min-width: 1020px) and (max-width:1400px) {
     #grilla{
         display: grid;
         grid-template-areas: 
@@ -511,7 +528,7 @@ $estilos: (
         "form form"
         "div div"
         "footer footer";
-        grid-template-rows: 25% 19% 36%;
+        grid-template-rows: 24% 30% 38%;
         grid-template-columns: 50% 50%; 
     }
     .inicio{
@@ -570,7 +587,7 @@ $estilos: (
         
     }
 }
-@media screen and (min-width: 1200px) and (max-width:1440px) {
+@media screen and (min-width: 1400px) and (max-width:1440px) {
     #grilla{
         display: grid;
         grid-template-areas: 
@@ -760,6 +777,7 @@ $estilos: (
         position: relative;
     }
 }
+//media productos
 @media screen and (min-width: 200px) and (max-width:320px) { 
     #Produc{
         display: grid;
@@ -769,6 +787,109 @@ $estilos: (
         "footer footer";
         grid-template-rows: 9% 81% 10%;
         grid-template-columns: 20% 80%;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
     }
     .footer {
         background-color: #c96333;
@@ -780,7 +901,6 @@ $estilos: (
         position: relative;
     }
 }
-//MEDIA PRODUCTOS
 @media screen and (min-width: 320px) and (max-width:500px) {
     #Produc{
         display: grid;
@@ -790,6 +910,118 @@ $estilos: (
         "footer footer";
         grid-template-rows: 9% 91%;
         grid-template-columns: 50% 50%;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
     }
     .footer {
         background-color: #c96333;
@@ -811,6 +1043,118 @@ $estilos: (
         grid-template-rows: 15% 85%;
         grid-template-columns: 50% 50%;
     }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
     .footer {
         background-color: #c96333;
         background-position: center center;
@@ -830,6 +1174,118 @@ $estilos: (
         "footer footer";
         grid-template-rows: 14% 86%;
         grid-template-columns: 50% 50%;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
     }
     .footer {
         background-color: #c96333;
@@ -851,6 +1307,118 @@ $estilos: (
         grid-template-rows: 18% 82%;
         grid-template-columns: 50% 50%;
     }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
     .footer {
         background-color: #c96333;
         background-position: center center;
@@ -871,6 +1439,118 @@ $estilos: (
         grid-template-rows: 17% 83% ;
         grid-template-columns: 50% 50%;
     }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
     .footer {
         background-color: #c96333;
         background-position: center center;
@@ -890,6 +1570,118 @@ $estilos: (
         "footer footer";
         grid-template-rows: 17% 83% ;
         grid-template-columns: 50% 50%;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
     }
     .footer {
         background-color: #c96333;
@@ -912,6 +1704,118 @@ $estilos: (
         grid-template-rows: 18% 82% ;
         grid-template-columns: 50% 50%;
     }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+    }
     .footer {
         background-color: #c96333;
         background-position: center center;
@@ -932,6 +1836,118 @@ $estilos: (
         "footer footer";
         grid-template-rows: 25% 75% ;
         grid-template-columns: 50% 50%;
+    }
+    .productos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    
+    }
+    @mixin Card ($width, $height){
+        height: $height;
+        width: $width;
+    }
+    .card1{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card2{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card3{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card4{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .card5{
+        background-color: #8d4848;
+        position: relative;
+        border-radius: 15px;
+        margin-top: 20px;
+        @include Card(300px,450px)
+    }
+    .fondoDescuentoCard1{
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .card1 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card2 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card3 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card4 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .card5 img{
+        width: 100px;
+        height: 200px;
+        margin-top: 15px;
+        margin-left: 105px;
+        margin-right: 20x;
+        margin-bottom: 0px;
+    }
+    .footer {
+        background-color: #c96333;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 300px;
+        width: 100%;
+        bottom: 0;
+        position: relative;
     }
     .footer {
         background-color: #c96333;

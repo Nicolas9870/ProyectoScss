@@ -38,31 +38,53 @@
   #Contac footer {
     grid-area: footer; }
 
-.inicio {
-  background-color: #2e0017;
-  border-top: solid 5px #ffbb08;
-  border-left: solid 5px #ffbb08;
-  border-right: solid 5px #612000;
-  border-bottom: solid 5px #612000;
-  border-radius: 12px;
-  top: 0; }
-  .inicio .logoInicio {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    justify-content: center;
-    justify-content: space-evenly;
-    height: 50px;
-    transition: height 2s;
-    margin-bottom: 40px; }
-  .inicio .logoInicio:hover {
-    height: 70px; }
+#Carrit {
+  display: grid;
+  grid-template-areas: "section section" "div div" "footer footer";
+  grid-template-rows: 33% 33% 33%;
+  grid-template-columns: 50% 50%; }
+  #Carrit section {
+    grid-area: section; }
+  #Carrit div {
+    grid-area: div; }
+  #Carrit footer {
+    grid-area: footer; }
 
-.logoInicio_edicionImagen {
-  height: 80px;
-  border-radius: 90px;
-  margin: auto;
-  text-align: center; }
+.fonodpantalla {
+  background-color: #e79a9a; }
+  .fonodpantalla .inicio {
+    background-color: #2e0017;
+    border-top: solid 5px #ffbb08;
+    border-left: solid 5px #ffbb08;
+    border-right: solid 5px #612000;
+    border-bottom: solid 5px #612000;
+    border-radius: 12px;
+    top: 0; }
+    .fonodpantalla .inicio .barradeNavegacion {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-image: linear-gradient(to right, #2b2724, #f0d48c);
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 3px; }
+
+.logoInicio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+  justify-content: space-evenly;
+  height: 50px;
+  margin-bottom: 40px; }
+  .logoInicio .logoInicio_edicionImagen {
+    height: 80px;
+    border-radius: 90px;
+    margin: auto;
+    text-align: center; }
 
 .tituloPrincipal {
   color: #ff5a41;
@@ -80,20 +102,8 @@
   font-family: 'Helvetica','Verdana','Monaco',sans-serif;
   text-align: center; }
 
-.barradeNavegacion {
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-image: linear-gradient(to right, #a75329, #ffbb08);
-  text-align: center;
-  border-radius: 12px;
-  margin-bottom: 3px; }
-
 .colordeNombre {
-  color: #B85252; }
+  color: #af7f7f; }
 
 .nom {
   background-color: #2e0017;
@@ -114,7 +124,6 @@
   margin-top: 10px;
   width: 200px;
   height: 200px;
-  transform: skewY(5deg);
   margin-left: auto;
   margin-right: auto; }
 
@@ -139,46 +148,6 @@
   border-radius: 5px;
   padding: 5px; }
 
-.card1 {
-  background-color: #8d4848;
-  position: relative;
-  border-radius: 15px;
-  margin-top: 20px;
-  height: 450px;
-  width: 300px; }
-
-.card2 {
-  background-color: #8d4848;
-  position: relative;
-  border-radius: 15px;
-  margin-top: 20px;
-  height: 450px;
-  width: 300px; }
-
-.card3 {
-  background-color: #8d4848;
-  position: relative;
-  border-radius: 15px;
-  margin-top: 20px;
-  height: 450px;
-  width: 300px; }
-
-.card4 {
-  background-color: #8d4848;
-  position: relative;
-  border-radius: 15px;
-  margin-top: 20px;
-  height: 450px;
-  width: 300px; }
-
-.card5 {
-  background-color: #8d4848;
-  position: relative;
-  border-radius: 15px;
-  margin-top: 20px;
-  height: 450px;
-  width: 300px; }
-
 .fondoDescuentoCard1 {
   background-color: gray;
   position: absolute;
@@ -196,7 +165,7 @@
   margin-bottom: 0px; }
 
 .botonProductos, .Agregar {
-  width: 100px;
+  width: 200px;
   height: 25px;
   border-radius: 5px;
   border: 1px solid black; }
@@ -279,7 +248,7 @@
 
 .zoom {
   transition: transform .2s; }
-  .zoom .zoom:hover {
+  .zoom:hover {
     transform: scale(1.5);
     border-radius: 6px; }
 
@@ -431,11 +400,11 @@
     position: relative;
     text-align: center; } }
 
-@media screen and (min-width: 1020px) and (max-width: 1200px) {
+@media screen and (min-width: 1020px) and (max-width: 1400px) {
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 25% 19% 36%;
+    grid-template-rows: 24% 30% 38%;
     grid-template-columns: 50% 50%; }
   .inicio {
     background-color: #2e0017;
@@ -486,7 +455,7 @@
     position: relative;
     text-align: center; } }
 
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media screen and (min-width: 1400px) and (max-width: 1440px) {
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
@@ -647,6 +616,96 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 9% 81% 10%;
     grid-template-columns: 20% 80%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -662,6 +721,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 9% 91%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -677,6 +834,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 15% 85%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -692,6 +947,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 14% 86%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -707,6 +1060,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 18% 82%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -722,6 +1173,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 17% 83%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -737,6 +1286,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 17% 83%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -753,6 +1400,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 18% 82%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
@@ -769,6 +1514,104 @@
     grid-template-areas: "section section" "div div" "footer footer";
     grid-template-rows: 25% 75%;
     grid-template-columns: 50% 50%; }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+    justify-content: space-evenly; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card2 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card3 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card4 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .card5 {
+    background-color: #8d4848;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 450px;
+    width: 300px; }
+  .fondoDescuentoCard1 {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border-radius: 5px;
+    padding: 5px; }
+  .card1 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card2 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card3 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card4 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .card5 img {
+    width: 100px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: 105px;
+    margin-right: 20x;
+    margin-bottom: 0px; }
+  .footer {
+    background-color: #c96333;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    bottom: 0;
+    position: relative; }
   .footer {
     background-color: #c96333;
     background-position: center center;
