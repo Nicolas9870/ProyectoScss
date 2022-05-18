@@ -79,6 +79,25 @@
         grid-area: footer;
     }
 }
+#Ubica{
+    display: grid;
+    grid-template-areas: 
+    "section section"
+    "div div"
+    "footer footer"
+    ;
+    grid-template-rows: 25% 25%  25% ;
+    grid-template-columns: 50% 50%;
+    section{
+        grid-area: section;
+    }
+    div{
+        grid-area: div;
+    }
+    footer{
+        grid-area: footer;
+    }
+}
 //PAGUINA PRINCIPAL
 .fonodpantalla{
     background-color: #e79a9a;
@@ -306,6 +325,19 @@
     border-radius: 12px;
     text-align:center;
 }
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 //PAGINA CONTACTOS
 $estilos: (
     color :  #ff5a41,
@@ -351,9 +383,7 @@ $estilos: (
 //FOOTER
 .footer {
     background-color: #c96333;
-    background-position: center center;
-    background-repeat: no-repeat;
-    min-height: 300px;
+    max-width: 100%;
     width: 100%;
     bottom: 0;
     position: relative;
@@ -411,8 +441,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 300px;
         width: 100%;
         bottom: 0;
@@ -468,8 +497,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 300px;
         width: 100%;
         bottom: 0;
@@ -525,8 +553,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 273px;
         width: 100%;
         bottom: 0;
@@ -591,8 +618,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 300px;
         width: 100%;
         bottom: 0;
@@ -648,8 +674,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 312px;
         width: 100%;
         bottom: 0;
@@ -705,8 +730,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 300px;
         width: 100%;
         bottom: 0;
@@ -739,8 +763,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 300px;
         width: 100%;
         bottom: -179px;
@@ -783,8 +806,7 @@ $estilos: (
     }
     .footer {
         background-color: #c96333;
-        background-position: center center;
-        background-repeat: no-repeat;
+        max-width: 100%;
         min-height: 300px;
         width: 100%;
         bottom: -179px;
@@ -1982,7 +2004,7 @@ $estilos: (
         "section section"
         "div div"
         "footer footer";
-        grid-template-rows: 34% 31%;
+        grid-template-rows: 32% 31%;
         grid-template-columns: 50% 50%;
         section{
             grid-area: section;
@@ -2029,8 +2051,8 @@ $estilos: (
         "section section"
         "div div"
         "footer footer";
-        grid-template-rows: 29% 20% 16%;
-        grid-template-columns: 44% 50%;
+        grid-template-rows: 28% 20% 16%;
+        grid-template-columns: 50% 50%;
         section{
             grid-area: section;
         }
@@ -2076,7 +2098,7 @@ $estilos: (
         "section section"
         "div div"
         "footer footer";
-        grid-template-rows: 30% 23% 15%;
+        grid-template-rows: 27% 23% 15%;
         grid-template-columns: 50% 50%;
         section{
             grid-area: section;
@@ -2123,8 +2145,8 @@ $estilos: (
         "section section"
         "div div"
         "footer footer";
-        grid-template-rows: 30% 23% 15%;
-        grid-template-columns: 44% 50%;
+        grid-template-rows: 27% 23% 15%;
+        grid-template-columns: 50% 50%;
         section{
             grid-area: section;
         }
@@ -2170,8 +2192,55 @@ $estilos: (
         "section section"
         "div div"
         "footer footer";
-        grid-template-rows: 29% 24% 15%;
-        grid-template-columns: 74% 74%;
+        grid-template-rows: 27% 24% 15%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .letraContactos{
+        color: map-get($estilos, color);
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: map-get($estilos, margin);
+    }
+    .contenedorContactos{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+    .infoContactos{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+    }
+    .footerContactos{
+        text-align: center;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1440px) and (max-width:1800px) {
+    #Contac{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer";
+        grid-template-rows: 27% 24% 15%;
+        grid-template-columns: 50% 50%;
         section{
             grid-area: section;
         }
@@ -2219,7 +2288,7 @@ $estilos: (
         "div div"
         "footer footer"
         ;
-        grid-template-rows: 29% 33% 33% ;
+        grid-template-rows: 27% 33% 33% ;
         grid-template-columns: 50% 50%; 
         section{
             grid-area: section;
@@ -2253,97 +2322,19 @@ $estilos: (
     .divicionfooter{
         margin-bottom: 100px;
     }
-    //PAGINA UBICACION
-    .infoUbicacion{
-        background-color: #2e0017;
-        border-top:solid 5px #ffbb08;
-        border-left: solid 5px #ffbb08;
-        border-right: solid 5px #612000;
-        border-bottom: solid 5px #612000;
-        border-radius: 12px;
-        text-align: center;
-    }
-    .letraUbicacion{
-        color: #ff5a41;
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
         font-style: italic;
         font-weight:bolder;
         font-size:20px;
         font-family:'Monaco','sans-serif','Helvetica','Verdana';
-        text-align: center;
-        margin: 10px 10px 10px 10px ;
-        .bordeUbicacion{
-            border-radius: 12px;
-            text-align:center;
-        }
-    } 
+    }
 }
 @media screen and (min-width: 500px)and (max-width:720px){
-    #Carrit{
-        display: grid;
-        grid-template-areas: 
-        "section section"
-        "div div"
-        "footer footer"
-        ;
-        grid-template-rows: 30% 33% 33% ;
-        grid-template-columns: 50% 50%; 
-        section{
-            grid-area: section;
-        }
-        div{
-            grid-area: div;
-        }
-        footer{
-            grid-area: footer;
-        }
-    }
-    .infoCarrito{
-        background-color: #2e0017;
-        border-top:solid 5px #ffbb08;
-        border-left: solid 5px #ffbb08;
-        border-right: solid 5px #612000;
-        border-bottom: solid 5px #612000;
-        border-radius: 12px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .letraCarrito{
-        color: #ff5a41;
-        font-style: italic;
-        font-weight:bolder;
-        font-size:20px;
-        font-family:'Monaco','sans-serif','Helvetica','Verdana';
-        text-align: center;
-        margin: 10px 10px 10px 10px ;
-    }
-    .divicionfooter{
-        margin-bottom: 100px;
-    }
-    //PAGINA UBICACION
-    .infoUbicacion{
-        background-color: #2e0017;
-        border-top:solid 5px #ffbb08;
-        border-left: solid 5px #ffbb08;
-        border-right: solid 5px #612000;
-        border-bottom: solid 5px #612000;
-        border-radius: 12px;
-        text-align: center;
-    }
-    .letraUbicacion{
-        color: #ff5a41;
-        font-style: italic;
-        font-weight:bolder;
-        font-size:20px;
-        font-family:'Monaco','sans-serif','Helvetica','Verdana';
-        text-align: center;
-        margin: 10px 10px 10px 10px ;
-        .bordeUbicacion{
-            border-radius: 12px;
-            text-align:center;
-        }
-    } 
-}
-@media screen and (min-width: 720px)and (max-width:1200px){
     #Carrit{
         display: grid;
         grid-template-areas: 
@@ -2409,6 +2400,114 @@ $estilos: (
         }
     } 
 }
+@media screen and (min-width: 720px)and (max-width:900px){
+    #Carrit{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 24% 33% 38% ;
+        grid-template-columns: 50% 50%; 
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .infoCarrito{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .letraCarrito{
+        color: #ff5a41;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: 10px 10px 10px 10px ;
+    }
+    .divicionfooter{
+        margin-bottom: 100px;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+    } 
+}
+@media screen and (min-width: 900px)and (max-width:1200px){
+    #Carrit{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 24% 33% 38% ;
+        grid-template-columns: 50% 50%; 
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
+    .infoCarrito{
+        background-color: #2e0017;
+        border-top:solid 5px #ffbb08;
+        border-left: solid 5px #ffbb08;
+        border-right: solid 5px #612000;
+        border-bottom: solid 5px #612000;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .letraCarrito{
+        color: #ff5a41;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+        margin: 10px 10px 10px 10px ;
+    }
+    .divicionfooter{
+        margin-bottom: 100px;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+    } 
+}
 @media screen and (min-width: 1200px)and (max-width:1200px){
     #Carrit{
         display: grid;
@@ -2417,7 +2516,7 @@ $estilos: (
         "div div"
         "footer footer"
         ;
-        grid-template-rows: 33% 33% 33% ;
+        grid-template-rows: 23% 33% 33% ;
         grid-template-columns: 50% 50%; 
         section{
             grid-area: section;
@@ -2483,7 +2582,7 @@ $estilos: (
         "div div"
         "footer footer"
         ;
-        grid-template-rows: 33% 33% 33% ;
+        grid-template-rows: 23% 33% 33% ;
         grid-template-columns: 50% 50%; 
         section{
             grid-area: section;
@@ -2549,7 +2648,7 @@ $estilos: (
         "div div"
         "footer footer"
         ;
-        grid-template-rows: 25% 33% 33% ;
+        grid-template-rows: 23% 33% 33% ;
         grid-template-columns: 50% 50%; 
         section{
             grid-area: section;
@@ -2715,32 +2814,28 @@ $estilos: (
     .divicionfooter{
         margin-bottom: 100px;
     }
-    //PAGINA UBICACION
-    .infoUbicacion{
-        background-color: #2e0017;
-        border-top:solid 5px #ffbb08;
-        border-left: solid 5px #ffbb08;
-        border-right: solid 5px #612000;
-        border-bottom: solid 5px #612000;
-        border-radius: 12px;
-        text-align: center;
-    }
-    .letraUbicacion{
-        color: #ff5a41;
-        font-style: italic;
-        font-weight:bolder;
-        font-size:20px;
-        font-family:'Monaco','sans-serif','Helvetica','Verdana';
-        text-align: center;
-        margin: 10px 10px 10px 10px ;
-        .bordeUbicacion{
-            border-radius: 12px;
-            text-align:center;
-        }
-    } 
 }
 //MEDIA UBICACION
 @media screen and (min-width: 300px)and (max-width:500px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 39% 23% 30%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2764,8 +2859,55 @@ $estilos: (
         text-align:center;
         width: 320px;
     }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+    }
 }
 @media screen and (min-width: 500px)and (max-width:720px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 27% 1% 25%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2789,8 +2931,56 @@ $estilos: (
         text-align:center;
         width: 500px;
     }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+    }
 }
-@media screen and (min-width: 720px)and (max-width:1200px){
+@media screen and (min-width: 720px)and (max-width:1020px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 24% 19% 20%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2814,8 +3004,56 @@ $estilos: (
         text-align:center;
         width: 720px;
     }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+    }
 }
-@media screen and (min-width: 1200px)and (max-width:1440px){
+@media screen and (min-width: 1020px)and (max-width:1440px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 21% 25% 22%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2839,8 +3077,56 @@ $estilos: (
         text-align:center;
         width: 1200px;
     }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1440px)and (max-width:1840px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 17% 25% 30%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2864,8 +3150,56 @@ $estilos: (
         text-align:center;
         width: 1440px;
     }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1840px)and (max-width:2440px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 16% 25% 40%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2889,8 +3223,56 @@ $estilos: (
         text-align:center;
         width: 1840px;
     }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+    }
 }
 @media screen and (min-width: 2440px)and (max-width:2840px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 13% 25% 46%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2914,8 +3296,56 @@ $estilos: (
         text-align:center;
         width: 2440px;
     }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
+    }
 }
 @media screen and (min-width: 2840px)and (max-width:3000px){
+    #Ubica{
+        display: grid;
+        grid-template-areas: 
+        "section section"
+        "div div"
+        "div div"
+        "footer footer"
+        ;
+        grid-template-rows: 12% 25% 49%;
+        grid-template-columns: 50% 50%;
+        section{
+            grid-area: section;
+        }
+        div{
+            grid-area: div;
+        }
+        div{
+            grid-area: div;
+        }
+        footer{
+            grid-area: footer;
+        }
+    }
     .infoUbicacion{
         background-color: #2e0017;
         border-top:solid 5px #ffbb08;
@@ -2938,5 +3368,30 @@ $estilos: (
         border-radius: 12px;
         text-align:center;
         width: 2840px;
+    }
+    .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .map-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+    .footer {
+        background-color: #c96333;
+        max-width: 100%;
+        width: 100%;
+        bottom: 0;
+        position: relative;
+        font-style: italic;
+        font-weight:bolder;
+        font-size:20px;
+        font-family:'Monaco','sans-serif','Helvetica','Verdana';
+        text-align: center;
     }
 }
