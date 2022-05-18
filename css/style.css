@@ -133,19 +133,23 @@
 
 .imagenesInicio {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  margin-top: 10px;
-  width: 200px;
-  height: 200px;
+  margin-top: 135px;
+  width: 25%;
+  height: 90px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-align: center; }
 
 .botonesInicio {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 5px; }
+
+.Arreglo {
+  margin-top: 40px; }
 
 .productos {
   display: flex;
@@ -303,7 +307,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 31% 20% 31%;
+    grid-template-rows: 31% 20% 34%;
     grid-template-columns: 61% 39%; }
   .barradeNavegacion {
     display: flex;
@@ -349,7 +353,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 25% 15% 30%;
+    grid-template-rows: 25% 15% 33%;
     grid-template-columns: 61% 39%; }
   .barradeNavegacion {
     display: flex;
@@ -395,7 +399,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 25% 15% 30%;
+    grid-template-rows: 25% 24% 33%;
     grid-template-columns: 61% 39%; }
   .barradeNavegacion {
     display: flex;
@@ -412,8 +416,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: 135px;
-    width: 195px;
+    margin-top: 100px;
+    width: 25%;
     height: 90px;
     margin-left: auto;
     margin-right: auto; }
@@ -441,7 +445,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 24% 30% 38%;
+    grid-template-rows: 24% 30% 41%;
     grid-template-columns: 50% 50%; }
   .inicio {
     background-color: #2e0017;
@@ -495,7 +499,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 25% 22% 36%;
+    grid-template-rows: 25% 22% 39%;
     grid-template-columns: 61% 39%; }
   .inicio {
     background-color: #2e0017;
@@ -540,7 +544,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 25% 19% 29%;
+    grid-template-rows: 25% 19% 32%;
     grid-template-columns: 71% 71%; }
   .barradeNavegacion {
     display: flex;
@@ -586,7 +590,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 34% 13% 14%;
+    grid-template-rows: 34% 13% 17%;
     grid-template-columns: 60% 50%; }
   .barradeNavegacion {
     display: flex;
@@ -611,7 +615,7 @@
   #grilla {
     display: grid;
     grid-template-areas: "section section"  "form form" "div div" "footer footer";
-    grid-template-rows: 30% 20% 40%;
+    grid-template-rows: 30% 20% 43%;
     grid-template-columns: 50% 50%; }
   .barradeNavegacion {
     display: flex;
@@ -631,7 +635,6 @@
     margin-top: 23px;
     width: 196px;
     height: 200px;
-    transform: skewY(5deg);
     margin-left: auto;
     margin-right: auto; }
   .footer {
