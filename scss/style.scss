@@ -98,16 +98,19 @@
         grid-area: footer;
     }
 }
+//VARIABLE SASS
+$colorprimario: #ffbb08;
+$colorsecundario: #612000;
 //PAGUINA PRINCIPAL
 .fonodpantalla{
     background-color: #e79a9a;
 }
 .inicio{
         background-color: #2e0017;
-        border-top:solid 5px #ffbb08;
-        border-left: solid 5px #ffbb08;
-        border-right: solid 5px #612000;
-        border-bottom: solid 5px #612000;
+        border-top:solid 5px $colorprimario;
+        border-left: solid 5px $colorprimario;
+        border-right: solid 5px $colorsecundario;
+        border-bottom: solid 5px $colorsecundario;
         border-radius: 12px;
         top: 0;
 }
@@ -159,10 +162,10 @@
 }
 .nom {
     background-color: #2e0017;
-    border-top:solid 5px #612000;
-    border-left: solid 5px #612000;
-    border-right: solid 5px #ffbb08;
-    border-bottom: solid 5px #ffbb08;
+    border-top:solid 5px $colorsecundario;
+    border-left: solid 5px $colorsecundario;
+    border-right: solid 5px $colorprimario;
+    border-bottom: solid 5px $colorprimario;
     border-radius: 12px;
     display: flex;  
     flex-direction: row; 
@@ -213,38 +216,39 @@
     text-align: center;
 }
 //SE AGREGA UN MIXIN
+$colordefondo:#8d4848; 
 @mixin Card ($width, $height){
     height: $height;
     width: $width;    
     .card1{
-        background-color: #8d4848;
+        background-color: $colordefondo;
         position: relative;
         border-radius: 15px;
         margin-top: 20px;
         @include Card(450px,650px);
     .card2{
-        background-color: #8d4848;
+        background-color: $colordefondo;
         position: relative;
         border-radius: 15px;
         margin-top: 20px;
         @include Card(450px,650px);
     }
     .card3{
-        background-color: #8d4848;
+        background-color: $colordefondo;
         position: relative;
         border-radius: 15px;
         margin-top: 20px;
         @include Card(450px,650px);
     }
     .card4{
-        background-color: #8d4848;
+        background-color: $colordefondo;
         position: relative;
         border-radius: 15px;
         margin-top: 20px;
         @include Card(450px,650px);
     }
     .card5{
-        background-color: #8d4848;
+        background-color: $colordefondo;
         position: relative;
         border-radius: 15px;
         margin-top: 20px;
@@ -277,7 +281,7 @@
 }
 .Agregar{
     @extend .botonProductos;
-    background-color: #ffbb08;
+    background-color: $colorprimario;
 }
 .textCenter{
     margin-left: 70px;
@@ -285,10 +289,10 @@
 //PAGINA CARRITO
 .infoCarrito{
     background-color: #2e0017;
-    border-top:solid 5px #ffbb08;
-    border-left: solid 5px #ffbb08;
-    border-right: solid 5px #612000;
-    border-bottom: solid 5px #612000;
+    border-top:solid 5px $colorprimario;
+    border-left: solid 5px $colorprimario;
+    border-right: solid 5px $colorsecundario;
+    border-bottom: solid 5px $colorsecundario;
     border-radius: 12px;
     text-align: center;
     margin-bottom: 10px;
@@ -309,10 +313,10 @@
 //PAGINA UBICACION
 .infoUbicacion{
     background-color: #2e0017;
-    border-top:solid 5px #ffbb08;
-    border-left: solid 5px #ffbb08;
-    border-right: solid 5px #612000;
-    border-bottom: solid 5px #612000;
+    border-top:solid 5px $colorprimario;
+    border-left: solid 5px $colorprimario;
+    border-right: solid 5px $colorsecundario;
+    border-bottom: solid 5px $colorsecundario;
     border-radius: 12px;
     text-align: center;
 }
@@ -364,10 +368,10 @@ $estilos: (
 }
 .infoContactos{
     background-color: #2e0017;
-    border-top:solid 5px #ffbb08;
-    border-left: solid 5px #ffbb08;
-    border-right: solid 5px #612000;
-    border-bottom: solid 5px #612000;
+    border-top:solid 5px $colorprimario;
+    border-left: solid 5px $colorprimario;
+    border-right: solid 5px $colorsecundario;
+    border-bottom: solid 5px $colorsecundario;
     border-radius: 12px;
     text-align: center;
 }
